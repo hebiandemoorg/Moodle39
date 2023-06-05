@@ -33,14 +33,15 @@
                 "parameters": {
                     "_artifactsLocation":           { "value": "[parameters('_artifactsLocation')]" },
                     "_artifactsLocationSasToken":   { "value": "[parameters('_artifactsLocationSasToken')]" },
-                    "redisDeploySwitch":            { "value": true },
+                    "redisDeploySwitch":            { "value": false },
                     "sshPublicKey":                 { "value": "[parameters('sshPublicKey')]" },
                     "autoscaleVmSku":               { "value": "Standard_DS1_v2" },
                     "enableAccelNwForOtherVmsSwitch":   { "value": false },
                     "dbServerType":                 { "value": "mysqlflex" },
                     "vnetDbDeploySwitch":           {"value": true },
                     "fileServerDiskCount":          { "value": 2 },
-                    "fileServerDiskSize":           { "value": 32 }
+                    "fileServerDiskSize":           { "value": 32 },
+                    "fileServerType":                { "value": "azurefiles" }
                 },
                 "templateLink": {
                     "uri": "[concat(parameters('_artifactsLocation'), 'azuredeploy.json', parameters('_artifactsLocationSasToken'))]"
